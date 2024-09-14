@@ -20,6 +20,7 @@ function divide(num1, num2) {
 let firstNum = 0;
 let secondNum = 0;
 let operator = "";
+const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 function operate(operator, num1, num2) {
     switch (operator) {
@@ -40,3 +41,13 @@ function operate(operator, num1, num2) {
             break;
     }
 }
+
+const display = document.querySelector(".displayContainer")
+
+const buttons = document.querySelectorAll(".number-btn");
+
+buttons.forEach((button) => button.addEventListener("click", function () {
+    display.textContent += button.textContent;
+}))
+
+
