@@ -42,6 +42,7 @@ function operate(operator, num1, num2) {
 }
 
 const display = document.querySelector(".displayContainer")
+display.textContent = "0";
 
 const numButtons = document.querySelectorAll(".number-btn");
 
@@ -55,7 +56,14 @@ numButtons.forEach((button) => button.addEventListener("click", function () {
         secondNum = Number(display.textContent);
     }
     else {
-        display.textContent += button.textContent;
+        if (display.textContent == "0") {
+            display.textContent = "";
+            display.textContent += button.textContent;
+        }
+        else {
+            display.textContent += button.textContent;
+        }
+
     }
 
 }))
@@ -86,7 +94,7 @@ percentageBtn.addEventListener("click", function () {
 
 const clearBtn = document.querySelector("#clear-btn");
 clearBtn.addEventListener("click", function () {
-    display.textContent = "";
+    display.textContent = "0";
     operatorClicked = false;
     displayContentClear = false;
     decimalClickedOnce = false;

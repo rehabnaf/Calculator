@@ -6,40 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <script src="cal.js" defer></script>
+    <link rel="stylesheet" href="cal.css">
 </head>
 
 <body>
-    <div class="displayContainer"></div>
-    <div>
-        <button id="clear-btn">AC</button>
-        <button id="negate-btn">+/-</button>
-        <button id="percentage-btn">%</button>
-        <button class="operator-btn">/</button>
-    </div>
-    <div>
-        <button class="number-btn">7</button>
-        <button class="number-btn">8</button>
-        <button class="number-btn">9</button>
-        <button class="operator-btn">*</button>
-    </div>
-    <div>
-        <button class="number-btn">4</button>
-        <button class="number-btn">5</button>
-        <button class="number-btn">6</button>
-        <button class="operator-btn">-</button>
-    </div>
-    <div>
-        <button class="number-btn">1</button>
-        <button class="number-btn">2</button>
-        <button class="number-btn">3</button>
-        <button class="operator-btn">+</button>
-    </div>
-    <div>
-        <button class="number-btn">0</button>
-        <button id="decimal-btn">.</button>
-        <button id="calculate-btn">=</button>
-    </div>
+    <div class="calContainer">
 
+        <div class="displayContainer"></div>
+        <div class="buttonContainer">
+            <div class="firstRow">
+                <button id="clear-btn">AC</button>
+                <button id="negate-btn">+/-</button>
+                <button id="percentage-btn">%</button>
+                <button class="operator-btn">/</button>
+            </div>
+            <div>
+                <button class="number-btn">7</button>
+                <button class="number-btn">8</button>
+                <button class="number-btn">9</button>
+                <button class="operator-btn">*</button>
+            </div>
+            <div>
+                <button class="number-btn">4</button>
+                <button class="number-btn">5</button>
+                <button class="number-btn">6</button>
+                <button class="operator-btn">-</button>
+            </div>
+            <div>
+                <button class="number-btn">1</button>
+                <button class="number-btn">2</button>
+                <button class="number-btn">3</button>
+                <button class="operator-btn">+</button>
+            </div>
+            <div class="lastNumberRow">
+                <button class="number-btn">0</button>
+                <button id="decimal-btn">.</button>
+                <button id="calculate-btn">=</button>
+            </div>
+        </div>
+    </div>
 
 </body>
 
