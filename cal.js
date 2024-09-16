@@ -116,6 +116,48 @@ decimalBtn.addEventListener("click", function () {
     }
 })
 
+const numbers = "0123456789"
+
+document.addEventListener("keydown", (Event) => {
+    if (Event.key == "Backspace" && display.textContent != "" && Number(display.textContent > 0)) {
+        display.textContent = display.textContent.slice(0, display.textContent.length - 1);
+    }
+    if (numbers.includes(Event.key)) {
+        switch (Number(Event.key)) {
+            case 0:
+                display.textContent += "0";
+                break;
+            case 1:
+                display.textContent += "1";
+                break;
+            case 2:
+                display.textContent += "2";
+                break;
+            case 3:
+                display.textContent += "3";
+                break;
+            case 4:
+                display.textContent += "4";
+                break;
+            case 5:
+                display.textContent += "5";
+                break;
+            case 6:
+                display.textContent += "6";
+                break;
+            case 7:
+                display.textContent += "7";
+                break;
+            case 8:
+                display.textContent += "8";
+                break;
+            case 9:
+                display.textContent += "9";
+                break;
+        }
+    }
+})
+
 
 
 
