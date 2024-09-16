@@ -131,6 +131,9 @@ document.addEventListener("keydown", (Event) => {
         display.textContent = display.textContent.slice(0, display.textContent.length - 1);
     }
     if (numbers.includes(Event.key)) {
+        if (display.textContent == "0") {
+            display.textContent = "";
+        }
         switch (Number(Event.key)) {
             case 0:
                 display.textContent += "0";
