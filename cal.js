@@ -68,6 +68,8 @@ numButtons.forEach((button) => button.addEventListener("click", function () {
 
 }))
 
+
+
 const operatorButtons = document.querySelectorAll(".operator-btn");
 let operatorClicked = false;
 let displayContentClear = true;
@@ -131,43 +133,62 @@ document.addEventListener("keydown", (Event) => {
         display.textContent = display.textContent.slice(0, display.textContent.length - 1);
     }
     if (numbers.includes(Event.key)) {
-        if (display.textContent == "0") {
-            display.textContent = "";
+
+        if (operatorClicked === true) {
+            if (displayContentClear === true) { // clearing the display content when a second number is entered so we can start with an empty display for the second number
+                display.textContent = "";
+                displayContentClear = false;
+            }
+            addKeyContentToDisplay(Number(Event.key));
+            secondNum = Number(display.textContent);
         }
-        switch (Number(Event.key)) {
-            case 0:
-                display.textContent += "0";
-                break;
-            case 1:
-                display.textContent += "1";
-                break;
-            case 2:
-                display.textContent += "2";
-                break;
-            case 3:
-                display.textContent += "3";
-                break;
-            case 4:
-                display.textContent += "4";
-                break;
-            case 5:
-                display.textContent += "5";
-                break;
-            case 6:
-                display.textContent += "6";
-                break;
-            case 7:
-                display.textContent += "7";
-                break;
-            case 8:
-                display.textContent += "8";
-                break;
-            case 9:
-                display.textContent += "9";
-                break;
+        else {
+            if (display.textContent == "0") {
+                display.textContent = "";
+                addKeyContentToDisplay(Number(Event.key));
+            }
+            else {
+                addKeyContentToDisplay(Number(Event.key));
+            }
+
         }
     }
 })
+
+function addKeyContentToDisplay(key) {
+    switch (key) {
+        case 0:
+            display.textContent += "0";
+            break;
+        case 1:
+            display.textContent += "1";
+            break;
+        case 2:
+            display.textContent += "2";
+            break;
+        case 3:
+            display.textContent += "3";
+            break;
+        case 4:
+            display.textContent += "4";
+            break;
+        case 5:
+            display.textContent += "5";
+            break;
+        case 6:
+            display.textContent += "6";
+            break;
+        case 7:
+            display.textContent += "7";
+            break;
+        case 8:
+            display.textContent += "8";
+            break;
+        case 9:
+            display.textContent += "9";
+            break;
+    }
+}
 
 
 
